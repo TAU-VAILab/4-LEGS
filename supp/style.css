@@ -1,0 +1,130 @@
+h1 {
+    font-family: "Roboto", Arial;
+    font-size: 36px;
+    color: rgb(72, 72, 72);
+    letter-spacing: -1px;
+    word-spacing: 8px;
+}
+
+h2 {
+    font-family: "Roboto", Arial;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Roboto", Arial;
+    font-size: 25px;
+}
+
+h4 {
+    font-family: "Roboto", Arial;
+    font-size: 18px;
+    color: blue;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h6 {
+    font-family: "Roboto", Arial;
+    font-size: 18px;
+    color: red;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h7 {
+    font-family: "Roboto", Arial;
+    font-weight: bold;
+    font-size: 18px;
+    color: green;
+    transform: rotate(0deg);
+    position: relative;
+    left: 100;
+}
+
+h5 {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+    line-height:15px;
+
+}
+h5 {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+    line-height:10px;
+
+}
+p {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+}
+
+li {
+    font-family: "Roboto", Arial;
+    font-size: 16px;
+}
+
+.prompt_title {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+}
+
+.prompt_title_green {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+	color: green;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.camera_title {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+	font-weight: bold;
+}
+.prompt_title_blue {
+    font-family: "Roboto", Arial;
+    font-size: 30px;
+	color: rgb(147, 10, 189);
+	font-weight: bold;
+}
+.prompt_title_red {
+    font-family: "Roboto", Arial;
+    font-size: 20px;
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.video-label {
+    font-family: "Roboto", Arial;
+    font-size: 24px;
+}
+.swiper-slide video {
+    width: 100%;
+    text-align: center;
+
+}
+.swiper {
+    width: 1200px;
+    margin-top: 30px;
+}
+.little_swiper {
+    width: 600px;
+    margin-top: 30px;
+
+}
+
+.swiper-wrapper {
+    height: 75%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-slide video {
+    width: 100%;
+}
+

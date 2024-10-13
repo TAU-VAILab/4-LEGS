@@ -1,0 +1,911 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>4-LEGS: 4D Language Embedded Gaussian Splatting</title>
+    <!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+</head>
+<script type="text/javascript">
+    src = hover.js;
+</script>
+
+<body>
+    <div class="page-container">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <h1 align="center">4-LEGS: 4D Language Embedded Gaussian Splatting</h1>
+        <h2 align="center">Supplementary Material</h2>
+
+        <p align="center">&nbsp;</p>
+        <h5 align="left">
+            Click below to view our interactive results, comparisons and ablations:
+        </h5>
+        <h5 align="left">
+            Click the video sliders to view different videos.
+        </h5>
+        <h5 align="left">
+            We recommend viewing these with Google chrome.
+        </h5>
+        <a href="#top"></a>
+        <ul>
+            <li><a href="../index.html">Supplementary Material Home</a></li>
+            <li><a href="./applications.html">Applications</a></li>
+            <li><a href="./comparisons.html">Comparisons</a></li>
+            <li><a href="./ablations.html">Ablations</a></li>
+            <li><a href="./volumetric_probabilities.html">Volumetric Probabilities</a></li>
+            <li><a href="../../index.html">Project Page</a></li>
+        </ul>
+
+        <!------------------ BEGIN SECTION ------------------>
+
+
+        <p>&nbsp;</p>
+        <hr>
+
+        <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Ablations</h1>
+
+        <p> We qualitatively compare the ablations discussed in the main paper over three random input views below.</p>
+        <h2 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Prompt - A person holding the ball 
+        </h2>
+    
+        <br />
+        <br>
+        
+        <!-- slider -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+            
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Static CLIP
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_static6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_static19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_static23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">AVG CLIP</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_avg6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_avg19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_avg23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">2D Features</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_2d6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_2d19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_2d23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <!-- Slide 1 -->
+                 <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">4-LEGS</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_ours6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_ours19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/holding_ball/holding_ours23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">GT</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/holding_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/holding_19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/holding_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <h2 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Prompt - A person picking up a box 
+        </h2>
+    
+        <br />
+        <br>
+        
+        <!-- slider -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+            
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Static CLIP
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_static6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_static19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_static23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">AVG CLIP</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_avg6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_avg19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_avg23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">2D Features</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_2d6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_2d19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_2d23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <!-- Slide 1 -->
+                 <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">4-LEGS</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_ours6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_ours19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/picking_up_box/picking_up_box_ours23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">GT</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/boxes_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/boxes_19.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/gt/boxes_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    <br>
+    <br>
+    <h1 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Additional Ablations</h1>
+    <br>
+        <h2 id="our_results_container" align="left"><a name="image-results" id="image-results"></a>Prompt - A person juggling balls
+        </h2>
+
+        <br />
+        <br>
+
+        <!-- slider -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Scale 0
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale0_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale0_0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale0_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Scale 1</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale1_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale1_0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale1_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Scale 2</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale2_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale2_0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale2_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Scale 3</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale3_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale3_0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale3_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Scale 4</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale4_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale4_0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_scale4_23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">Concat</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_concat6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_concat0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_concat23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">w/o Attn</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_viclips6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_viclips0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_viclips23_new.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <table class="slide-table" width="100%" align="center">
+                        <tbody>
+                            <tr>
+                                <th colspan="3" width="100%" class="prompt_title_blue" align="center">4-LEGS</th>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_ours_new_6.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_ours0.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                                <td colspan="1">
+                                    <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                        <source
+                                            src="../results/ablations/A_man_juggles/juggle_ours23.mp4"
+                                            type="video/mp4">
+                                    </video>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                                <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+                <table class="slide-table" width="100%" align="center">
+                    <tbody>
+                        <tr>
+                            <th colspan="3" width="100%" class="prompt_title_blue" align="center">GT</th>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                    <source
+                                        src="../results/ablations/gt/juggling_balls_cam6.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </td>
+                            <td colspan="1">
+                                <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                    <source
+                                        src="../results/ablations/gt/juggle_0.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </td>
+                            <td colspan="1">
+                                <video  controls="controls" onclick="this.play()" muted width="100%" class="result-video">
+                                    <source
+                                        src="../results/ablations/gt/juggling_balls_cam23.mp4"
+                                        type="video/mp4">
+                                </video>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="1" class="camera_title" align="center">Camera 1</th>
+                            <th colspan="1" class="camera_title" align="center">Camera 2</th>
+                            <th colspan="1" class="camera_title" align="center">Camera 3</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <p><br>
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+    </div>
+
+
+    <!---- SCRIPTS-->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            speed: 1000,
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        let currentVideo = "video3";
+        let currentSuffix = "";
+
+        function playVideo(newVideo, newSuffix) {
+            if (currentVideo === newVideo && currentSuffix === newSuffix) return;
+
+            const videoPlayer = document.getElementById('videoPlayer');
+
+            currentTime = videoPlayer.currentTime;
+            videoPlayer.src = `./webpage_assets/videos/interactive/${newVideo}${newSuffix}.mp4`;
+            videoPlayer.addEventListener('loadedmetadata', function () {
+                videoPlayer.currentTime = currentTime;
+                videoPlayer.removeEventListener('loadedmetadata', arguments.callee);
+
+                // After changing the video source, set the fixed height
+                setFixedHeight();
+            });
+            videoPlayer.play();
+            currentVideo = newVideo;
+            currentSuffix = newSuffix;
+        }
+
+        function switchVideo(newSuffix) {
+            if (currentSuffix === newSuffix) return;
+            playVideo(currentVideo, newSuffix);
+        }
+
+        // Function to set a fixed height for the row after changing the video source
+        function setFixedHeight() {
+            const videoRow = document.getElementById('videoRow');
+            videoRow.style.height = `${videoRow.offsetHeight}px`;
+        }
+    </script>
+</body>
+
+</html>

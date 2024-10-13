@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="xdvJxvo39Ei0nahgmgXGp9DCslFea8wH789x6mmAY-A" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <meta property="og:site_name" content="4-LEGS" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="4-LEGS: 4D Language Embedded Gaussian Splatting" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://tau-vailab.github.io/4-LEGS/" />
+    <meta property="og:image" content="https://tau-vailab.github.io/4-LEGS/webpage_assets/legs_sample.png" />
+
+    <meta property="article:publisher" content="https://tau-vailab.github.io/4-LEGS/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="4-LEGS: 4D Language Embedded Gaussian Splatting" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="https://tau-vailab.github.io/4-LEGS/" />
+    <meta name="twitter:image" content="https://tau-vailab.github.io/4-LEGS/webpage_assets/legs_sample.png" />
+
+    <title>4-LEGS: 4D Language Embedded Gaussian Splatting</title>
+<!--    <link rel="icon" href="../pics/wis_logo.jpg">-->
+    <link rel="icon" href="./webpage_assets/images/icon_legs.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="page-container">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- title -->
+    <h1 class="ourh1" align="center">4-LEGS</h1>
+    <h2 class="ourh2" align="center">4D Language Embedded Gaussian Splatting</h2>
+	
+    <!-- authors and affiliations -->
+    <section class="authors_block">
+        <div class="authors" align="center">
+            <span class="author-block"><a href="https://galfiebelman.github.io/" target="_blank">Gal Fiebelman</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/tamir-cohen-09a693167/" target="_blank">Tamir Cohen</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/ayellet-morgenstern-04b501211/" target="_blank">Ayellet Morgenstern</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://phogzone.com/" target="_blank">Peter Hedman</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.elor.sites.tau.ac.il/" target="_blank">Hadar Averbuch-Elor</a><sup>1</sup></span>
+        </div>
+
+        <div class="affiliations" align="center">
+            <span class="author-block"><sup>1</sup>Tel Aviv University, </span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+        </div>
+    </section>
+
+	<!-- authors and affiliations -->
+    <!-- link buttons -->
+    <div class="column has-text-centered">
+        <div class="publication-links" align="center">
+
+          <!-- arxiv link -->
+          <span class="link-block">
+            <a href="" class="paper-link" style="display: inline-block">
+                <button class="button">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </button>
+            </a>
+          </span>
+
+          <!-- Github Link. -->
+          <span class="link-block">
+            <a href="" style="display: inline-block">
+                <button class="button">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </button>
+            </a>
+          </span>
+
+          <!-- Data Link. -->
+          <span class="link-block">
+            <a href="" style="display: inline-block">
+                <button class="button">
+                    <span class="icon">
+                        <i class="fa fa-folder"></i>
+                    </span>
+                    <span>Data (Coming Soon)</span>
+                  </button>
+            </a>
+          </span>
+
+          <!-- Supp Link. -->
+          <span class="link-block">
+            <a href="supp/index.html" style="display: inline-block">
+                <button class="button">
+                    <span class="icon">
+                        <i class="fa fa-plus-square"></i>
+                    </span>
+                    <span>Supplementary Material</span>
+                  </button>
+            </a>
+          </span>
+        </div>
+    </div>
+
+
+    <br>
+    <center>
+        <video id="main-video" autobuffer muted autoplay loop controls width="832" height="468">
+                <source id="mp4" src="webpage_assets/demo/demo.mp4" type="video/mp4">
+            </video>
+    </center> 
+    <br>
+
+    <section class="tldr-section" width="100%">
+        <div class="intro-container has-text-justified">
+            <div class="intro-paragraph">
+                <p>
+                    <br>
+                    <span class="intro-paragraph_bold">TL;DR Our method grounds spatio-temporal features into a 4D Gaussian Splatting representation.</span><br><br>
+                    This allows localizing actions in <b>time</b> and <b>space</b>. 
+                    Above we illustrate our method, given input multiview videos capturing a dynamic 3D scene, we optimize a <b>4-LEGS</b> (a 4D language field). 
+                    Then we localize a text query in both space and time using the mean relevancy score and the extracted relvancy maps. These 
+                    spatio-temporal maps allow for creating various highlight effects, such as automatically visualizing a bullet-time display at a slower speed 
+                    of the input query.
+                </p>
+            </div>
+        </div>
+    </section> 
+
+    <!-- abstract -->
+    <section class="abstract-section" width="100%">
+        <div class="abstract-container has-text-justified">
+            <hr>
+            <h2 align="center">Abstract</h2>
+            <p class="has-text-justified">
+                The emergence of neural representations has revolutionized our means for digitally viewing a wide range of 3D scenes, 
+                enabling the synthesis of photorealistic images rendered from novel views. Recently, several techniques have been proposed 
+                for connecting these low-level representations with the high-level semantics understanding embodied within the scene. 
+                These methods elevate the rich semantic understanding from 2D imagery to 3D representations, distilling high-dimensional 
+                spatial features onto 3D space. In our work, we are interested in connecting language with a dynamic modeling of the world. 
+                We show how to lift spatio-temporal features to a 4D representation based on 3D Gaussian Splatting. This enables an 
+                interactive interface where the user can spatiotemporally localize events in the video from text prompts. We demonstrate our 
+                system on public 3D video datasets of people and animals performing various actions.
+            </p>
+    </section>
+
+    <!-- interactive-section -->
+    <section class="interactive-section" width="100%">
+        <div class="abstract-container has-text-justified">
+            <hr>
+            <h2 align="center">Examples of 4-LEGS Text-Prompted Video Editing Applications</h2><br></br>
+            <table class="interactive-table" width="100%" align="center">
+                <tr>
+                    <td align="center" >
+                        <button class="prompt_title_black_small" onclick="playVideo('video3', '')" >Scene Selection</button>
+                    </td>
+                    <td align="center">
+						<!-- <a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a> -->
+                        <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Bullet Time</button>
+                    </td>
+                    <td align="center">
+                        <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Zoom In</button>
+                    </td>
+                    <td align="center" >
+                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')" >Desturation and Panning</button>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table class="interactive-table" width="100%" align="center">
+                <tr class="fixed-height-row" id="videoRow">
+                    <td class="interactiv_vid" align="center" colspan="4">
+                        <video id="videoPlayer" loop autoplay muted width="75%" class="result-video">
+                            <source src="./webpage_assets/interactive/video3.mp4" type="video/mp4">
+                        </video>
+                    </td>
+                </tr>
+            </table>
+            <br>
+        <table class="interactive-table" width="100%" align="center">
+                <tr>
+                    <td align="center">
+                        <button id="prompt_a" class="prompt_title_blue_small" onclick="switchVideo('_a')">A person swinging the softball bat</button>
+                    </td>
+                    <td align="center">
+						<!-- <a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a> -->
+                        <button id="prompt_b" class="prompt_title_blue_small" onclick="switchVideo('_b')">A person picking up the box</button>
+                    </td>
+                    <td align="center">
+                        <button id="prompt_c" class="prompt_title_blue_small" onclick="switchVideo('_c')">A person throwing the basketball</button>
+                    </td>
+                </tr>
+            </table>
+            <br></br>               
+            <p class="interactive_bold">Select a video editing application and then select one of the text prompts to view the edit enabled by the spatio-temporal 
+                grounding achieved by our method. <br>
+                As illustrated in this interactive visualization, <b>4-LEGS</b> enables interactive text-conditioned video editing by localizing spatio-temporal features
+                in both <b>time</b> and <b>space</b>.</p>
+        </div>
+    </section>
+
+    <!-- method -->
+    <section class="method-section" width="100%">
+        <div class="abstract-container">
+            <hr>
+            <h2 align="center">How does it work?</h2>
+		<br>
+            <div class="im_container has-text-justified" width="90%" align="center">
+                <img align="center" src="./webpage_assets/overview.png" alt="Overview" width="100%">
+            </div> 
+            <p class="has-text-justified">
+                <br>
+                🌍 Given multiple videos capturing a dynamic 3D scene, we first extract pixel-aligned spatio-temporal language features at 
+                multiple scales using a pretrained video-text model.<br></br>
+                💡 We average these features to produce spatio-temporal features, which are encoded into a more compact latent space that is used for supervising the 
+                optimization of a 4D language embedded Gaussian.<br></br>
+                🔍 During inference, given an input language query, <b>4-LEGS</b> localizes the query in <b>time</b> by computing a relevancy score over the volumetric language
+                features distilled on the gaussians and in <b>space</b> we render relevancy maps in real time.<br></br>
+                📋 See our paper for more details on our 4D language embedded gaussians and how we apply them 
+                to enable an interactive interface for text-conditioned video editing tasks.
+            </p>
+        <div class="attn-grid-vid-container">
+    </section>
+
+    <!-- <section class="ack-section" width="100%"> 
+        <div class="ack-container">
+            <hr> 
+            <h2 align="center">Acknowledgements</h2> 
+            <p> 
+				This work was supported by the Israel Science Foundation (grant no. 2510/23) and by the Alon Scholarship.
+            </p> 
+        </div> 
+    </section>  -->
+
+  <p><br>
+  </p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+</div>
+
+<script>
+const swiper = new Swiper('.swiper', {
+    autoplay: {
+    delay: 4000,
+    },
+    // Optional parameters
+    speed: 1000,
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+<script>
+    let currentVideo = "video3";
+    let currentSuffix = "";
+
+    function changePrompts(newVideo) {
+        const prompt_a = document.getElementById('prompt_a');
+        const prompt_b = document.getElementById('prompt_b');
+        const prompt_c = document.getElementById('prompt_c');
+        if (newVideo == "video3") {
+            prompt_a.textContent = "A person swinging the softball bat";
+            prompt_b.textContent = "A person picking up the box";
+            prompt_c.textContent = "A person throwing the basketball";
+        }
+        if (newVideo == "video2") {
+            prompt_a.textContent = "A fox stretching";
+            prompt_b.textContent = "The football flying in the air";
+            prompt_c.textContent = "A person swinging the softball bat";
+        }
+        if (newVideo == "video1") {
+            prompt_a.textContent = "A person juggles";
+            prompt_b.textContent = "A person swinging the softball bat";
+            prompt_c.textContent = "A person throwing the football";
+        }
+        if (newVideo == "video4") {
+            prompt_a.textContent = "A person picking up the box";
+            prompt_b.textContent = "A person juggles";
+            prompt_c.textContent = "A person swinging the softball bat";
+        }
+
+    }
+    function playVideo(newVideo, newSuffix) {
+        if (currentVideo === newVideo && currentSuffix === newSuffix) return;
+        if (currentVideo != newVideo) changePrompts(newVideo);
+
+        const videoPlayer = document.getElementById('videoPlayer');
+
+        let currentTime = videoPlayer.currentTime;
+        videoPlayer.src = `./webpage_assets/interactive/${newVideo}${newSuffix}.mp4`;
+        videoPlayer.addEventListener('loadedmetadata', function () {
+            videoPlayer.currentTime = 0;
+            videoPlayer.removeEventListener('loadedmetadata', arguments.callee);
+
+            // After changing the video source, set the fixed height
+            setFixedHeight();
+        });
+        videoPlayer.play();
+        currentVideo = newVideo;
+        currentSuffix = newSuffix;
+    }
+
+    function switchVideo(newSuffix) {
+        if (currentSuffix === newSuffix) return;
+        playVideo(currentVideo, newSuffix);
+    }
+
+    // Function to set a fixed height for the row after changing the video source
+    function setFixedHeight() {
+        const videoRow = document.getElementById('videoRow');
+        videoRow.style.height = `${videoRow.offsetHeight}px`;
+    }
+</script>
+
+</body></html>
