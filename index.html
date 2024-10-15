@@ -63,7 +63,7 @@
 
           <!-- arxiv link -->
           <span class="link-block">
-            <a href="" class="paper-link" style="display: inline-block">
+            <a href="https://arxiv.org/abs/2410.10719" class="paper-link" style="display: inline-block">
                 <button class="button">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -162,17 +162,17 @@
             <table class="interactive-table" width="100%" align="center">
                 <tr>
                     <td align="center" >
-                        <button class="prompt_title_black_small" onclick="playVideo('video3', '')" >Scene Selection</button>
+                        <button id="video3" class="prompt_title_red_small red-box" onclick="playVideo('video3', '')" >Scene Selection</button>
                     </td>
                     <td align="center">
 						<!-- <a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a> -->
-                        <button class="prompt_title_black_small" onclick="playVideo('video2', '')">Bullet Time</button>
+                        <button id="video2" class="prompt_title_black_small" onclick="playVideo('video2', '')">Bullet Time</button>
                     </td>
                     <td align="center">
-                        <button class="prompt_title_black_small" onclick="playVideo('video1', '')">Zoom In</button>
+                        <button id="video1" class="prompt_title_black_small" onclick="playVideo('video1', '')">Zoom In</button>
                     </td>
                     <td align="center" >
-                        <button class="prompt_title_black_small" onclick="playVideo('video4', '')" >Desturation and Panning</button>
+                        <button id="video4" class="prompt_title_black_small" onclick="playVideo('video4', '')" >Desturation and Panning</button>
                     </td>
                 </tr>
             </table>
@@ -190,7 +190,7 @@
         <table class="interactive-table" width="100%" align="center">
                 <tr>
                     <td align="center">
-                        <button id="prompt_a" class="prompt_title_blue_small" onclick="switchVideo('_a')">A person swinging the softball bat</button>
+                        <button id="prompt_a" class="prompt_title_red_small red-box" onclick="switchVideo('_a')">A person swinging the softball bat</button>
                     </td>
                     <td align="center">
 						<!-- <a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a> -->
@@ -231,7 +231,26 @@
             </p>
         <div class="attn-grid-vid-container">
     </section>
+    <!--     BibTex-->
+    <section class="bib-section" width="100%">
+        <div class="bib-container">
+            <hr>
+            <h2 align="center">BibTeX</h2>
+            <div class="code-container" align="left">
+                <code>
+                @misc{fiebelman20244legs4dlanguageembedded,<br>
+                &emsp;   &emsp; title={4-LEGS: 4D Language Embedded Gaussian Splatting}, <br>
+                &emsp;   &emsp; author={Gal Fiebelman and Tamir Cohen and Ayellet Morgenstern and Peter Hedman and Hadar Averbuch-Elor},<br>
+                &emsp;   &emsp; year={2024},<br>
+                &emsp;   &emsp; eprint={2410.10719},<br>
+                &emsp;   &emsp; archivePrefix={arXiv},<br>
+                &emsp;   &emsp; primaryClass={cs.CV}<br>
 
+                }
+                </code>
+            </div>
+        </div>
+    </section>
     <section class="ack-section" width="100%"> 
         <div class="ack-container">
             <hr> 
@@ -276,7 +295,36 @@ const swiper = new Swiper('.swiper', {
     let currentVideo = "video3";
     let currentSuffix = "";
 
-    function changePrompts(newVideo) {
+    function changeBorderPrompt(currentSuffix, newSuffix) {
+        var temp_curr = currentSuffix;
+        if (temp_curr == ""){
+            temp_curr = "_a";
+        }
+        const new_p = document.getElementById(`prompt${newSuffix}`);
+        const curr_p = document.getElementById(`prompt${temp_curr}`);
+        curr_p.classList.remove('red-box');
+        curr_p.classList.remove('prompt_title_red_small');
+        curr_p.classList.add('prompt_title_blue_small');
+        new_p.classList.add('red-box');
+        new_p.classList.remove('prompt_title_blue_small');
+        new_p.classList.add('prompt_title_red_small');
+    }
+
+    function changeBorderApp(currentVideo, newVideo, currentSuffix, newSuffix) {
+        if (currentSuffix != newSuffix){
+            changeBorderPrompt(currentSuffix, '_a');
+        }
+        const new_vid = document.getElementById(newVideo);
+        const curr_vid = document.getElementById(currentVideo);
+        curr_vid.classList.remove('red-box');
+        curr_vid.classList.remove('prompt_title_red_small');
+        curr_vid.classList.add('prompt_title_black_small');
+        new_vid.classList.add('red-box');
+        new_vid.classList.remove('prompt_title_black_small');
+        new_vid.classList.add('prompt_title_red_small');
+    }
+
+    function changePrompts(newVideo, currentVideo) {
         const prompt_a = document.getElementById('prompt_a');
         const prompt_b = document.getElementById('prompt_b');
         const prompt_c = document.getElementById('prompt_c');
@@ -300,22 +348,34 @@ const swiper = new Swiper('.swiper', {
             prompt_b.textContent = "A person juggles";
             prompt_c.textContent = "A person swinging the softball bat";
         }
-
     }
+
     function playVideo(newVideo, newSuffix) {
         if (currentVideo === newVideo && currentSuffix === newSuffix) return;
-        if (currentVideo != newVideo) changePrompts(newVideo);
+        if (currentVideo != newVideo) {
+            changeBorderApp(currentVideo, newVideo, currentSuffix);
+            changePrompts(newVideo, currentVideo);
+        }
 
         const videoPlayer = document.getElementById('videoPlayer');
 
         let currentTime = videoPlayer.currentTime;
         videoPlayer.src = `./webpage_assets/interactive/${newVideo}${newSuffix}.mp4`;
         videoPlayer.addEventListener('loadedmetadata', function () {
+            if (newVideo == "video3" && newSuffix == "_b"){
+                videoPlayer.pause();
+            }
             videoPlayer.currentTime = 0;
             videoPlayer.removeEventListener('loadedmetadata', arguments.callee);
 
             // After changing the video source, set the fixed height
             setFixedHeight();
+
+            if (newVideo == "video3" && newSuffix == "_b"){
+                setTimeout(function() {
+                    videoPlayer.play();  
+                }, 500); 
+            }
         });
         videoPlayer.play();
         currentVideo = newVideo;
@@ -324,6 +384,7 @@ const swiper = new Swiper('.swiper', {
 
     function switchVideo(newSuffix) {
         if (currentSuffix === newSuffix) return;
+        changeBorderPrompt(currentSuffix, newSuffix);
         playVideo(currentVideo, newSuffix);
     }
 

@@ -57,6 +57,12 @@ li {
     font-size: 1.8vw;
 }
 
+.red-box {
+	border: 5px solid red;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 .prompt_title_local {
     font-family: "Indie Flower", Arial;
     font-size: 32px;
