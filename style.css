@@ -218,8 +218,8 @@ li {
 .conference-block {
 	font-family: "Noto Sans", Arial;
 	margin-bottom: 10px;
-	color: rgb(0, 100, 200);
-    font-size: 23px;
+	color: rgb(0, 0, 0);
+    font-size: 28px;
 	font-weight: bold;
 }
 
