@@ -1,0 +1,8 @@
+open3d==0.16.0
+tqdm==4.65.0
+imageio==2.31.2
+imageio-ffmpeg==0.4.9
+einops==0.6.1
+ftfy==6.1.1
+regex==2024.4.16
+timm==0.9.12
