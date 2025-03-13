@@ -86,11 +86,11 @@ Now, run the following command:
 
 For example:
 
-    python extract_features.py -s basketball -f 0 -l 3
+    python extract_features.py -s basketball -f 0 -l 300
 
 For this example the extracted features are under `data/basketball/interpolators/`.
 
-(Feature extraction takes some time to run, we reccomend running in parallel by splitting the timesteps, if possible.)
+(Feature extraction takes some time to run, we recommend running in parallel on multiple gpus by splitting the timesteps, if possible. (e.g., -f 0 -l 10, -f 10 -l 20, etc.))
 
 ## Training an Autoencoder
 The next step is training an autoencoder:
@@ -111,9 +111,12 @@ Finally, we can train our `4-LEGS`:
 
 For example:
 
-    python train_4legs.py -s basketball -e 4legs -f 0 -l 3
+    python train_4legs.py -s basketball -e 4legs -f 0 -l 300
 
 For this example, the output model is under `output/4legs/basketball/`.
+
+(Training takes some time to run, we recommend running in parallel on multiple gpus by splitting the timesteps, if possible. (e.g., -f 0 -l 10, -f 10 -l 20, etc.))
+
 
 In order to render a given text prompt:
 
