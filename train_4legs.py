@@ -178,7 +178,7 @@ if __name__ == "__main__":
     parser.add_argument("-f","--first_timestep", type=int, required=True)
     parser.add_argument("-l","--last_timestep", type=int, required=True)
     parser.add_argument("--output_dir", type=str, default="output")
-    parser.add_argument("--num_iter_per_timestep", type=int, default=500)
+    parser.add_argument("--num_iter_per_timestep", type=int, default=2000)
     parser.add_argument("--autoencoder_dir", type=str, default="ae")
     parser.add_argument("--features_dir", type=str, default="interpolators")
     parser.add_argument("--legs_lr", type=float, default=0.0025)
