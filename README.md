@@ -104,7 +104,7 @@ For example:
 For this example the autoencoder weights will be saved under `data/basketball/ae/`.
 
 
-## Train 4_LEGS
+## Train 4-LEGS
 Finally, we can train our `4-LEGS`:
 
     python train_4legs.py -s  <data sequence folder name> -e <experiment name> -f <first timestep to train> -l <last timestep to train>
