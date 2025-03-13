@@ -22,8 +22,6 @@ This is the official pytorch implementation of 4-LEGS.
     https://github.com/TAU-VAILab/4-LEGS.git
     cd 4-LEGS
 
-</br>
-
 ## Setting up environment
     conda create --name 4legs python=3.7 --yes
     conda activate 4legs
