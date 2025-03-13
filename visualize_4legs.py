@@ -81,10 +81,8 @@ def get_render_var(pre_params, legs_param_dir, t):
         rendervar = {k: v[is_fg] for k, v in rendervar.items()}
     return rendervar
 
-def visualize(sequence, exp_name,prompt, args):
+def visualize(sequence, exp_name,prompt,res_dir, args):
     with torch.no_grad():
-        res_dir = f"./{args.results_dir}/{exp_name}/{sequence}"
-        os.makedirs(res_dir, exist_ok=True)
         pre_params, decoder = load_scene_data(sequence, args)
         legs_param_dir = f"./{args.trained_output_dir}/{exp_name}/{sequence}"
         vlm_encoder = VICLIPNetwork(VICLIPNetworkConfig)
@@ -109,10 +107,8 @@ def visualize(sequence, exp_name,prompt, args):
             p =probs_norm[i]* segs[i]
             p = apply_colormap(p, normalize=False, shift=False, clip=False)
             composited =p*0.5 +ims[i] * 0.5
-            im2 = Image.fromarray(to8b(composited))
-            im2.save(f"{res_dir}/comp_{i}.png")
             images.append(to8b(composited))
-        imageio.mimwrite(os.path.join(res_dir, "{}_vid.mp4".format("_".join(prompt[0].split(" ")))), images, fps=args.fps)
+        imageio.mimwrite(os.path.join(res_dir, "4legs_vid.mp4"), images, fps=args.fps)
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="Train args")
@@ -128,9 +124,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
     exp_name = args.exp_name
     sequence = args.sequence
-    os.makedirs(f"./{args.results_dir}/{exp_name}/{sequence}", exist_ok=True)
-    prompt = " ".join(args.prompt.split("_"))
+    prompt = args.prompt
+    prompt_dir = "_".join(prompt.split(" "))
+    res_dir = f"./{args.results_dir}/{exp_name}/{sequence}/{prompt_dir}"
+    os.makedirs(res_dir, exist_ok=True)    
     print(prompt)
     prompt = [prompt]
-    visualize(sequence, exp_name, prompt, args)
+    visualize(sequence, exp_name, prompt, res_dir,args)
 
