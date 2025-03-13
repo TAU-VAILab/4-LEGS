@@ -19,7 +19,7 @@ This is the official pytorch implementation of 4-LEGS.
 # Getting Started
 
 ## Getting the repo
-    https://github.com/TAU-VAILab/4-LEGS.git
+    git clone https://github.com/TAU-VAILab/4-LEGS.git
     cd 4-LEGS
 
 ## Setting up environment
@@ -59,7 +59,7 @@ Now the data should be under the folder `data/`.
 ## Pretraining a Dynamic 3DGS
 First, we need to pretrain a `Dynamic 3DGS`:
 
-    python train_d3dgs.py -s <path to data sequence folder> -e <experiment name>
+    python train_d3dgs.py -s <data sequence folder name> -e <experiment name>
 
 For example:
 
@@ -69,7 +69,7 @@ For this example, the output model is under `output/pretrained/basketball/`.
 
 In order to render the pretrained `Dynamic 3DGS`:
 
-    python visualize_d3dgs.py -s <path to data sequence folder> -e <experiment name>
+    python visualize_d3dgs.py -s <data sequence folder name> -e <experiment name>
 
 For example:
 
@@ -82,7 +82,7 @@ In order to train our `4-LEGS`, first we have to extract spatio-temporal feature
 
 Now, run the following command:
 
-    python extract_features.py -s <path to data sequence folder> -f <first timestep to extract features> -l <last timestep to extract features>
+    python extract_features.py -s <data sequence folder name> -f <first timestep to extract features> -l <last timestep to extract features>
 
 For example:
 
@@ -90,12 +90,12 @@ For example:
 
 For this example the extracted features are under `data/basketball/interpolators/`.
 
-(Feature extraction is timely, we reccomend running on in parallel by splitting the timesteps, if possible.)
+(Feature extraction takes some time to run, we reccomend running in parallel by splitting the timesteps, if possible.)
 
 ## Training an Autoencoder
 The next step is training an autoencoder:
 
-    python train_autoencoder.py -s <path to data sequence folder>
+    python train_autoencoder.py -s <data sequence folder name>
 
 For example:
 
@@ -107,7 +107,7 @@ For this example the autoencoder weights will be saved under `data/basketball/ae
 ## Train 4_LEGS
 Finally, we can train our `4-LEGS`:
 
-    python train_4legs.py -s  <path to data sequence folder> -e <experiment name> -f <first timestep to train> -l <last timestep to train>
+    python train_4legs.py -s  <data sequence folder name> -e <experiment name> -f <first timestep to train> -l <last timestep to train>
 
 For example:
 
@@ -117,19 +117,13 @@ For this example, the output model is under `output/4legs/basketball/`.
 
 In order to render a given text prompt:
 
-    python visualize_4legs.py -s <path to data sequence folder> -e <experiment name> -p <prompt>
+    python visualize_4legs.py -s <data sequence folder name> -e <experiment name> -p <prompt>
 
 For example:
 
     python visualize_4legs.py -s basketball -e 4legs -p "A ball flying in air"
 
 For this example, the output video is under `results/4legs/basketball/A_ball_flying_in_air/`.
-<br>
-
-# Grounding PanopticSports Benchmark
-
-See [Grounding PanopticSports Benchmark documentation](docs/benchmark.md) for more information on the Grounding PanopticSports Benchmark.
-<br>
 
 ## Notes on license
 The code in this repository (except `external.py`, the rasterization directories `diff-gaussian-rasterization-w-depth/` and `diff-gaussian-rasterization-w-depth-feat/` and the ViCLIP directory `feature_extraction/ViCLIP`) is licensed under the MIT licence.
@@ -139,6 +133,11 @@ These are required for this project, and for these a more restrictive license fr
 This requires different permissions for use in any commercial application, but is otherwise freely distributed for research and experimentation.
 
 </br>
+
+# Grounding PanopticSports Benchmark
+
+See [Grounding PanopticSports Benchmark documentation](docs/benchmark.md) for more information on the Grounding PanopticSports Benchmark.
+<br>
 
 # BibTeX
 If you find our work useful in your research, please consider citing:
