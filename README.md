@@ -132,8 +132,6 @@ This code runs using code adapted from [here](https://github.com/JonathonLuiten/
 These are required for this project, and for these a more restrictive license from Inria applies which can be found [here](https://github.com/graphdeco-inria/gaussian-splatting/blob/main/LICENSE.md) and an Apache license that can be found [here](https://github.com/OpenGVLab/InternVideo/blob/main/LICENSE).
 This requires different permissions for use in any commercial application, but is otherwise freely distributed for research and experimentation.
 
-</br>
-
 # Grounding PanopticSports Benchmark
 
 See [Grounding PanopticSports Benchmark documentation](docs/benchmark.md) for more information on the Grounding PanopticSports Benchmark.
