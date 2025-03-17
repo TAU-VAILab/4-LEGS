@@ -143,15 +143,12 @@ See [Grounding PanopticSports Benchmark documentation](docs/benchmark.md) for mo
 # BibTeX
 If you find our work useful in your research, please consider citing:
 
-     @misc{fiebelman20244legs4dlanguageembedded,
+     @article{fiebelman20244,
       title={4-LEGS: 4D Language Embedded Gaussian Splatting},
-      author={Gal Fiebelman and Tamir Cohen and Ayellet Morgenstern and Peter Hedman and Hadar Averbuch-Elor},
-      year={2024},
-      eprint={2410.10719},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-    }
-    
+      author={Fiebelman, Gal and Cohen, Tamir and Morgenstern, Ayellet and Hedman, Peter and Averbuch-Elor, Hadar},
+      journal={arXiv preprint arXiv:2410.10719},
+      year={2024}
+    }   
 </br>
 
 # Acknowledgements
